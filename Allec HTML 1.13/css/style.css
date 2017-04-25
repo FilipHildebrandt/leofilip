@@ -14321,6 +14321,10 @@ table th[class*="col-"] {
     float: left;
     margin: 0 50px;
     border: 6px solid #ffffff;
+    display: block;
+    width: 100%;
+    height: auto;
+
 }
 
 .person .person__name {
