@@ -11626,13 +11626,21 @@ table th[class*="col-"] {
 
 .block-title {
     position: relative;
-    padding: 34px 0 31px;
+    padding: 15px 0 15px;
     margin-top: 0;
     margin-bottom: 40px;
     font: 28px 'Varela Round', sans-serif;
     text-align: center;
     color: #5e3459;
     border-bottom: 1px solid #dfe6e7;
+}
+.block-title3 {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font: 25px 'Varela Round', sans-serif;
+    text-align: center;
+    color: #5e3459;
 }
 
 .block-title2 {
@@ -15605,10 +15613,11 @@ table th[class*="col-"] {
 }
 
 .login .login__btn {
-    margin-top: 28px;
-    margin-bottom: 65px;
+    margin-top: 20px;
+    margin-bottom: 25px;
     display: block;
     width: 100%;
+    text-align: center;
 }
 
 .error {
@@ -22241,7 +22250,9 @@ html#ecwid_html body#ecwid_body .ecwid-minicart div.ecwid-minicart-clickArea {
 .btn--decorated {
     position: relative;
     z-index: 20;
-    padding: 15px 37px 12px 37px;
+    /*padding: 15px 37px 12px 37px;*/
+    padding-top: 15px;
+    padding-bottom: 14px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
     color: #ffffff;
     -webkit-transition: all 300ms ease-in;

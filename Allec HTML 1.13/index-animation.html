@@ -609,6 +609,124 @@
 
     });
     </script>
+    <script>
+    $(document).ready(function() {
+        preloader();
+
+        $('#pagepiling').pagepiling({
+            scrollingSpeed: 700,
+            navigation: {
+                'position': 'right',
+                'tooltips': ['Open Your Mind', 'Work Space', 'Free Your Imagination', 'Make Yourself Comfortable']
+            },
+            onLeave: function(index, nextIndex, direction) {
+                if (index == '4' && direction == 'up') {
+                    setTimeout(disable_scroll, 300);
+                    $.fn.pagepiling.setAllowScrolling(true);
+                }
+            },
+            afterLoad: function(anchorLink, index) {
+                //using index
+                if (index == 4) {
+                    enable_scroll()
+                    $.fn.pagepiling.setAllowScrolling(false);
+                }
+                if (index == 3) {
+                    $('body').scrollTo(0, 400);
+                }
+            }
+        });
+        $('#pagepiling').on('inview', function(event, visible) {
+            if (visible == true) {
+                $.fn.pagepiling.setAllowScrolling(true);
+            }
+        });
+
+        disable_scroll();
+        $('body').scrollTo(0, 0);
+        var keys = [37, 38, 39, 40];
+
+        function preventDefault(e) {
+            e = e || window.event;
+            if (e.preventDefault)
+                e.preventDefault();
+            e.returnValue = false;
+        }
+
+        function keydown(e) {
+            for (var i = keys.length; i--;) {
+                if (e.keyCode === keys[i]) {
+                    preventDefault(e);
+                    return;
+                }
+            }
+        }
+
+        function wheel(e) {
+            preventDefault(e);
+        }
+
+        function disable_scroll() {
+            if (window.addEventListener) {
+                window.addEventListener('DOMMouseScroll', wheel, false);
+            }
+            window.onmousewheel = document.onmousewheel = wheel;
+            document.onkeydown = keydown;
+        }
+
+        function enable_scroll() {
+            if (window.removeEventListener) {
+                window.removeEventListener('DOMMouseScroll', wheel, false);
+            }
+            window.onmousewheel = document.onmousewheel = document.onkeydown = null;
+        }
+
+        //Content margin top changing
+        var resizeTimer;
+
+        function topSpacing() {
+            if (resizeTimer) clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                var height_value = $('.pp-section').height();
+                $('.top-block').css("margin-top", height_value);
+            }, 300);
+        }
+
+        topSpacing();
+
+        //resize when resizing window or changing mobile device orientation
+        $(window).resize(topSpacing);
+
+        $('.service').one('inview', function(event, visible) {
+            if (visible == true) {
+                $('.service.start-1').addClass('zoomIn');
+                $('.service.start-2').addClass('zoomIn stage2');
+                $('.service.start-3').addClass('zoomIn stage3');
+            }
+        });
+
+        $('.image-holder--info').one('inview', function(event, visible) {
+            if (visible == true) {
+                $('.image-holder--info').addClass('fadeInUp');
+            }
+        });
+
+        $('.bubble--medium.bubble--danger').one('inview', function(event, visible) {
+            if (visible == true) {
+                $('.bubble--start').addClass('zoomIn');
+                $('.bubble--position').addClass('zoomIn');
+                $('.bubble--small').addClass('zoomIn');
+                $('.bubble--normal').addClass('zoomIn');
+                $('.bubble--medium.bubble--neutral').addClass('zoomIn');
+                $('.bubble--medium.bubble--danger').addClass('zoomIn');
+                $('.bubble--big').addClass('zoomIn');
+                $('.bubble--large').addClass('zoomIn');
+                $('.bubble--huge').addClass('zoomIn');
+            }
+        });
+
+    });
+    </script>
 </body>
 
 </html>
