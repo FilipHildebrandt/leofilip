@@ -5,7 +5,7 @@
     <!-- Basic Page Needs -->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="utf-8">
-    <title>Allec - Timeline Blog</title>
+    <title>Allec - Fullwidth Product List (List)</title>
     <meta name="description" content="A Template by Congruity Hub team">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Congruity Hub team">
@@ -25,6 +25,12 @@
     <link href="external/z-nav/z-nav.css" rel="stylesheet">
     <!-- Touch slider - Swiper -->
     <link href="external/swiper/idangerous.swiper.css" rel="stylesheet" />
+    <!-- Select box -->
+    <link href="external/bootstrap-select/bootstrap-select.css" rel="stylesheet">
+    <!-- Raty js -->
+    <link href="external/raty/jquery.raty.css" rel="stylesheet">
+    <!-- Magnific popup - responsive popup plugin -->
+    <link href="external/magnific-popup/magnific-popup.css" rel="stylesheet" />
     <!-- Custom -->
     <link href="css/style.css?v=1" rel="stylesheet" />
     <!-- *** Favicons *** -->
@@ -52,15 +58,12 @@
 <body>
     <div class="wrapper" id="top">
         <!-- Header section -->
-        <header class="header">
+        <header class="header header--shop header--light">
             <div class="header-fixed">
-                <div class="header-line waypoint" data-animate-down="header-up" data-animate-up="header-down">
+                <div class="header-line header-line--shop waypoint" data-animate-down="header-up" data-animate-up="header-down">
                     <div class="container">
                         <!-- Contact information about company -->
                         <address class="contact-info pull-left hidden-lower">
-                            <a href="http://maps.google.com/?q=101 West Street, New York, NY 10014" class="contact-info__item" target="_blank">
-                                <i class="fa fa-location-arrow"></i> 101 West Street, New York, NY 10014
-                            </a>
                             <a class="contact-info__item" href="tel://1-888-555-5555">
                                 <i class="fa fa-mobile"></i> +1-888-555-5555
                             </a>
@@ -70,22 +73,28 @@
                         </address>
                         <!-- end contact information -->
                         <!-- Search field -->
-                        <form class="search pull-right" id="search-form" name="search-form" method="get" action="#">
+                        <form class="search search--centered" id="search-form" name="search-form" method="get" action="#">
                             <input class="search__field" name="search-request" type="search" placeholder="search" value="">
                             <button class="search__btn" type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
                         </form>
                         <!-- end search field -->
+                        <ol class="breadcrumb breadcrumb--nav">
+                            <li><a href="#">Currency</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Login</a></li>
+                        </ol>
                     </div>
                     <!-- end container -->
                 </div>
                 <div class="fixed-top header-down">
-                    <div class="container">
+                    <div class="container relative-element">
                         <!--  Logo  -->
-                        <a class="logo" href="index.html">
+                        <a class="logo logo--shop" href="index.html">
                             <!-- Remove comments to choose image and add comment to h1 -->
-                            <!--<img src="images/logo-full.png" alt="">-->
+                            <!--<img src="images/logo-full-light.png" alt="">-->
                             <svg class="logo__svg" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
                                 <g>
                                     <path class="logo__svg-path" d="m18.8,14c-1.2,-0.2 -2.3,0.1 -3.2,0.6c-0.8,0.5 -1.8,0.2 -2.4,-0.7c-0.4,-0.8 -0.2,-1.8 0.7,-2.3c1.4,-0.7 3,-1.2 4.7,-1.1c-0.2,-0.1 -0.4,-0.2 -0.6,-0.4c-0.8,-0.7 -1.8,-1.3 -3,-1.4c-2.6,-0.3 -5.1,1.5 -5.4,4s1.6,4.9 4.2,5.2c1.2,0.1 2.3,-0.1 3.2,-0.6c0.8,-0.5 1.8,-0.2 2.4,0.7c0.4,0.8 0.2,1.8 -0.7,2.3c-1.3,0.7 -3,1.2 -4.7,1.1c0.2,0.1 0.4,0.2 0.6,0.4c0.8,0.7 1.8,1.3 3,1.4c2.6,0.3 5.1,-1.5 5.4,-4c0.4,-2.4 -1.5,-4.8 -4.2,-5.2zm-2.8,-14c-8.8,0 -16,7.2 -16,16s7.2,16 16,16c8.8,0 16,-7.2 16,-16s-7.2,-16 -16,-16zm10.5,19.7c-0.6,4.5 -4.8,7.5 -9.4,7c-2,-0.3 -3.7,-1.2 -4.9,-2.4c-0.7,-0.7 -0.7,-1.8 0,-2.4c0.3,-0.3 0.7,-0.4 1,-0.5c-4.4,-0.6 -7.6,-4.7 -7.1,-9c0.6,-4.5 4.8,-7.5 9.3,-7c2,0.2 3.7,1.2 5,2.4c0.7,0.7 0.7,1.8 0,2.4c-0.3,0.3 -0.7,0.4 -1,0.5c4.5,0.6 7.7,4.6 7.1,9z" fill="#ffffff">
@@ -102,7 +111,7 @@
                                 <span class="menu-text">navigation</span>
                                 <div class="menu-head"></div>
                             </a>
-                            <ul class="z-nav__list">
+                            <ul class="z-nav__list z-nav--shop">
                                 <li class="z-nav__item">
                                     <!-- Subsidiary menu toogle button -->
                                     <span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
@@ -193,7 +202,7 @@
                                 <li class="z-nav__item">
                                     <!-- Subsidiary menu toogle button -->
                                     <span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <a class="z-nav__link z-nav__link--active" href="blog.html">Blog</a>
+                                    <a class="z-nav__link" href="blog.html">Blog</a>
                                     <!-- Subsidiary menu list-->
                                     <ul class="z-nav__list-secondary">
                                         <li class="z-nav__item"><a class="z-nav__link" href="blog.html">Blog with sidebar</a></li>
@@ -213,7 +222,7 @@
                                 <li class="z-nav__item">
                                     <!-- Subsidiary menu toogle button -->
                                     <span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-                                    <a class="z-nav__link" href="site-map.html">Pages</a>
+                                    <a class="z-nav__link z-nav__link--active" href="site-map.html">Pages</a>
                                     <!-- Subsidiary menu list-->
                                     <ul class="z-nav__list-secondary">
                                         <li class="z-nav__item"><a class="z-nav__link" href="index-rtl.html"> RTL version</a></li>
@@ -325,6 +334,55 @@
                             <!-- end list menu item -->
                         </nav>
                         <!-- end navigation section -->
+                        <!-- Shopping cart section -->
+                        <div class='cart'>
+                            <!-- Toggle for menu mobile view -->
+                            <a href="#" class="cart__toggle">
+                                <span class="fa fa-shopping-cart cart__toggle--icon"></span>
+                                <!-- <span class="cart__text">Shopping Cart (2) - <span class="cart-highlight">$299</span></span> -->
+                                <div class="cart__head">
+                                    <span class="cart__text">Shopping Cart (2) - <span class="cart-highlight">$299</span></span>
+                                </div>
+                            </a>
+                            <!-- Shopping cart indecator -->
+                            <div class="cart__link">
+                                <i class="fa fa-shopping-cart cart__icon"></i>
+                                <span class="cart__indecator">Cart (2) - <span class="cart-highlight">$ 299</span></span>
+                                <i class="fa fa-angle-down icon__more"></i>
+                            </div>
+                            <!-- Shopping cart list -->
+                            <div class='cart__list'>
+                                <!-- Shopping cart item -->
+                                <div class="cart__item">
+                                    <a class="cart__item-image" href="single-product.html">
+                                        <img alt='' src="images/shop/laptop.jpg">
+                                    </a>
+                                    <a href="single-product.html" class="cart__item-title">Laptop NX3452</a>
+                                    <div class="cart__item-rating"><img src="images/icons/stars.svg" alt=""></div>
+                                    <p class="cart__item-price">$ 198</p>
+                                    <p class="cart__item-bonus">Bonus: 5%</p>
+                                    <a href="#" class="cart__close"><i class="fa fa-times"></i></a>
+                                </div>
+                                <!-- end Shopping cart item -->
+                                <!-- Shopping cart list -->
+                                <div class="cart__item">
+                                    <a class="cart__item-image" href="single-product.html">
+                                        <img alt='' src="images/shop/laptop.jpg">
+                                    </a>
+                                    <a href="single-product.html" class="cart__item-title">Laptop AJ124 Mini</a>
+                                    <div class="cart__item-rating"><img src="images/icons/stars.svg" alt=""></div>
+                                    <p class="cart__item-price">$ 101</p>
+                                    <p class="cart__item-bonus">Bonus: 2%</p>
+                                    <a href="#" class="cart__close"><i class="fa fa-times"></i></a>
+                                </div>
+                                <!-- end Shopping cart item -->
+                                <div class="checkout-wrap">
+                                    <a href="checkout.html" class="btn btn-info btn--decorated">Check Out</a>
+                                </div>
+                            </div>
+                            <!-- end cart list-->
+                        </div>
+                        <!-- end shopping cart -->
                     </div>
                     <!-- end container -->
                     <!-- Colored divider -->
@@ -337,201 +395,192 @@
         <!-- Section show current page and breadcrumb -->
         <section class="page-indecator">
             <div class="container">
-                <h2 class="heading">Timeline Blog</h2>
+                <h2 class="heading">Fullwidth Product List</h2>
                 <!-- Breadcrumb pattern -->
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">Blog</li>
+                    <li class="active">Shop</li>
                 </ol>
                 <!-- Default one color divider -->
-                <div class="divider divider--bottom-md"></div>
+                <div class="divider divider--bottom-m"></div>
             </div>
         </section>
         <!-- end section show current page and breadcrumb -->
-        <section class="container">
+        <section class="container product-wrapper">
             <h3 class="not-visible">Main conrainer</h3>
-            <div class="timeline">
-                <!-- Standart arcticle with image -->
-                <article class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/sample/2.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">Snapchat's Update Was Powered by Secret Acquisition</h3></a>
-                            <p class="post__date">May 05, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- end article -->
-                <!-- Standart arcticle with image -->
-                <article class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/blog/timeline/2.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">Responsive Design Begins With The URL</h3></a>
-                            <p class="post__date">May 05, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- end article -->
-                <!-- Standart arcticle with image -->
-                <arcticle class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/blog/timeline/3.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">Cache Invalidation Strategies With Varnish Cache</h3></a>
-                            <p class="post__date">May 04, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </arcticle>
-                <!-- end article -->
-                <!-- Standart arcticle with image -->
-                <article class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/blog/timeline/4.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">450+ Openings in Digital Tech at Delivery.com and More</h3></a>
-                            <p class="post__date">May 04, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- end article -->
-                <!-- Standart arcticle with image -->
-                <article class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/blog/timeline/5.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">5 Can't-Miss Apps: LiveLens and More</h3></a>
-                            <p class="post__date">May 04, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- end article -->
-                <!-- Standart arcticle with image -->
-                <article class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/blog/timeline/6.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">Activists Take San Francisco to Court Over 'Google Buses'</h3></a>
-                            <p class="post__date">May 03, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- end article -->
-                <!-- Standart arcticle with image -->
-                <article class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/blog/timeline/7.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">Snapchat's Update Was Powered by Secret Acquisition</h3></a>
-                            <p class="post__date">May 03, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- end article -->
-                <!-- Standart arcticle with image -->
-                <article class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/blog/timeline/8.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">Apple's LuxVue Acquisition Could Be the Biggest iWatch Hint Yet</h3></a>
-                            <p class="post__date">May 03, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- end article -->
-                <!-- Standart arcticle with image -->
-                <article class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/blog/timeline/9.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">Samsung NX Mini Is the Perfect Camera for the Selfie-Obsessed</h3></a>
-                            <p class="post__date">May 02, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- end article -->
-                <!-- Standart arcticle with image -->
-                <article class="post--short-link">
-                    <div class="post">
-                        <a href="single-post.html" class="image-container image-container--max post__link-area">
-                            <img src="images/blog/timeline/10.jpg" alt="">
-                        </a>
-                        <div class="post__detail">
-                            <a href="single-post.html"><h3 class="post__heading">Nostalgic Photo Series Brings Forgotten Gadgets Back to Life</h3></a>
-                            <p class="post__date">May 01, 2015</p>
-                            <ul class="tags post__tags">
-                                <li class="tags__item tags__item--user"><a href="#" class="tags__link">by Marti Queen</a></li>
-                                <li></li>
-                                <li class="tags__item tags__item--comment"><a href="#" class="tags__link">5 comments</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- end article -->
+            <div class="shop-view">
+                <span class="shop-view__results">86 results</span>
+                <a class="shop-view__variant" href="shop-grid-full.html"><i class="fa fa-th"></i></a>
+                <a class="shop-view__variant shop-view__variant--active" href="shop-list-full.html"><i class="fa fa-th-list"></i></a>
             </div>
+            <form class="select select--thin select--size pull-right" name="select" method="get" action="#">
+                <select class="select-box" id="select-box" name="select-box" tabindex="0">
+                    <option value="default" selected="selected">default sorting</option>
+                    <option value="popular">by popularity</option>
+                    <option value="arrival">by arrival</option>
+                    <option value="rating">by rating</option>
+                    <option value="low">by price: low to high</option>
+                    <option value="high">by price: high to low</option>
+                </select>
+            </form>
+            <!-- Product preview list -->
+            <div class="product product--list">
+                <div class="row">
+                    <div class="col-sm-8 col-md-9 separate-block">
+                        <div class="product__photo product__photo--bordered">
+                            <div class="product__marker">new</div>
+                            <img src="images/shop/product-list/1.jpg" alt="">
+                            <div class="product__control">
+                                <a class="product__control__item product__control-left" href="single-product.html"><i class="fa fa-link"></i></a>
+                                <a class="product__control__item product__control-right" href="images/shop/product-full/1.jpg"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <a class="product__title" href="#">Samsung Galaxy Note 10.1 2015 Edition 4G LTE Tablet, Black 10.1-Inch 32GB (Verizon Wireless)</a>
+                        <div class="product-rating">
+                            <div class="score"></div>
+                        </div>
+                        <span class="product__comment"><i class="fa fa-comment"></i>5 reviews</span>
+                        <p class="product__info">Usually ships in 2 to 4 weeks FREE Shipping. Pellentesque in lacinia quam. Fusce quis nulla tincidunt, interdum magna vitae, viverra est. Nunc eu sodales turpis, varius viverra mauris.</p>
+                        <a class="link product__link" href="wishlist.html"><i class="fa fa-plus-circle"></i>Wishlist</a>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-sm-4 col-md-3">
+                        <div class="product__action">
+                            <p class="product__price">$ 399.00</p>
+                            <a class="btn btn-warning btn--decorated product__btn" href="shopping-cart.html">Add to Cart</a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end product preview list -->
+            <!-- Product preview list -->
+            <div class="product product--list">
+                <div class="row">
+                    <div class="col-sm-8 col-md-9 separate-block">
+                        <div class="product__photo product__photo--bordered">
+                            <div class="product__marker">new</div>
+                            <img src="images/shop/product-list/2.jpg" alt="">
+                            <div class="product__control">
+                                <a class="product__control__item product__control-left" href="single-product.html"><i class="fa fa-link"></i></a>
+                                <a class="product__control__item product__control-right" href="images/shop/product-full/2.jpg"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <a class="product__title" href="#">Samsung Galaxy Note 10.1 2015 Edition 4G LTE Tablet, Black 10.1-Inch 32GB (Verizon Wireless)</a>
+                        <div class="product-rating">
+                            <div class="score"></div>
+                        </div>
+                        <span class="product__comment"><i class="fa fa-comment"></i>3 reviews</span>
+                        <p class="product__info">Usually ships in 2 to 4 weeks FREE Shipping. Pellentesque in lacinia quam. Fusce quis nulla tincidunt, interdum magna vitae, viverra est. Nunc eu sodales turpis, varius viverra mauris.</p>
+                        <a class="link product__link" href="wishlist.html"><i class="fa fa-plus-circle"></i>Wishlist</a>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-sm-4 col-md-3">
+                        <div class="product__action">
+                            <p class="product__price">$ 349.00</p>
+                            <a class="btn btn-warning btn--decorated product__btn" href="shopping-cart.html">Add to Cart</a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end product preview list -->
+            <!-- Product preview list -->
+            <div class="product product--list">
+                <div class="row">
+                    <div class="col-sm-8 col-md-9 separate-block">
+                        <div class="product__photo product__photo--bordered">
+                            <div class="product__marker product__marker--alt">sale</div>
+                            <img src="images/shop/product-list/1.jpg" alt="">
+                            <div class="product__control">
+                                <a class="product__control__item product__control-left" href="single-product.html"><i class="fa fa-link"></i></a>
+                                <a class="product__control__item product__control-right" href="images/shop/product-full/1.jpg"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <a class="product__title" href="#">Samsung Galaxy Note 10.1 2015 Edition 4G LTE Tablet, Black 10.1-Inch 32GB (Verizon Wireless)</a>
+                        <div class="product-rating">
+                            <div class="score"></div>
+                        </div>
+                        <span class="product__comment"><i class="fa fa-comment"></i>5 reviews</span>
+                        <p class="product__info">Usually ships in 2 to 4 weeks FREE Shipping. Pellentesque in lacinia quam. Fusce quis nulla tincidunt, interdum magna vitae, viverra est. Nunc eu sodales turpis, varius viverra mauris.</p>
+                        <a class="link product__link" href="wishlist.html"><i class="fa fa-plus-circle"></i>Wishlist</a>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-sm-4 col-md-3">
+                        <div class="product__action">
+                            <p class="product__price">$ 399.00 <span class="product__sale product__sale--under">$ 599.00</span></p>
+                            <a class="btn btn-warning btn--decorated product__btn" href="shopping-cart.html">Add to Cart</a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end product preview list -->
+            <!-- Product preview list -->
+            <div class="product product--list">
+                <div class="row">
+                    <div class="col-sm-8 col-md-9 separate-block">
+                        <div class="product__photo product__photo--bordered">
+                            <img src="images/shop/product-list/3.jpg" alt="">
+                            <div class="product__control">
+                                <a class="product__control__item product__control-left" href="single-product.html"><i class="fa fa-link"></i></a>
+                                <a class="product__control__item product__control-right" href="images/shop/product-full/3.jpg"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <a class="product__title" href="#">Samsung 23.6-Inch LED Monitor (S24D300HL)</a>
+                        <div class="product-rating">
+                            <div class="score"></div>
+                        </div>
+                        <span class="product__comment"><i class="fa fa-comment"></i>16 reviews</span>
+                        <p class="product__info">Usually ships in 2 to 4 weeks FREE Shipping. Pellentesque in lacinia quam. Fusce quis nulla tincidunt, interdum magna vitae, viverra est. Nunc eu sodales turpis, varius viverra mauris.</p>
+                        <a class="link product__link" href="wishlist.html"><i class="fa fa-plus-circle"></i>Wishlist</a>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-sm-4 col-md-3">
+                        <div class="product__action">
+                            <p class="product__price">$ 209.00</p>
+                            <a class="btn btn-warning btn--decorated product__btn" href="shopping-cart.html">Add to Cart</a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end product preview list -->
+            <!-- Product preview list -->
+            <div class="product product--list">
+                <div class="row">
+                    <div class="col-sm-8 col-md-9 separate-block">
+                        <div class="product__photo product__photo--bordered">
+                            <img src="images/shop/product-list/2.jpg" alt="">
+                            <div class="product__control">
+                                <a class="product__control__item product__control-left" href="single-product.html"><i class="fa fa-link"></i></a>
+                                <a class="product__control__item product__control-right" href="images/shop/product-full/2.jpg"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <a class="product__title" href="#">Samsung Galaxy Note 10.1 2015 Edition 4G LTE Tablet, Black 10.1-Inch 32GB (Verizon Wireless)</a>
+                        <div class="product-rating">
+                            <div class="score"></div>
+                        </div>
+                        <span class="product__comment"><i class="fa fa-comment"></i>8 reviews</span>
+                        <p class="product__info">Usually ships in 2 to 4 weeks FREE Shipping. Pellentesque in lacinia quam. Fusce quis nulla tincidunt, interdum magna vitae, viverra est. Nunc eu sodales turpis, varius viverra mauris.</p>
+                        <a class="link product__link" href="wishlist.html"><i class="fa fa-plus-circle"></i>Wishlist</a>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-sm-4 col-md-3">
+                        <div class="product__action">
+                            <p class="product__price">$ 349.00</p>
+                            <a class="btn btn-warning btn--decorated product__btn" href="shopping-cart.html">Add to Cart</a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end product preview list -->
             <!-- Rectangle shapes -->
             <div class="pagination pagination--rect divider--top-larger">
                 <a class="pagination__prev" href="#"><i class="fa fa-angle-left"></i></a>
@@ -666,11 +715,20 @@
     <script src="external/twitterfeed/twitterfeed.js"></script>
     <!-- Scroll to piugin -->
     <script src="external/scrollto/jquery.scrollTo.min.js"></script>
+    <!-- Select box -->
+    <script src="external/bootstrap-select/bootstrap-select.js"></script>
+    <!-- Raty js -->
+    <script src="external/raty/jquery.raty.js"></script>
+    <!-- Magnific popup - responsive popup plugin -->
+    <script src="external/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!-- Custom -->
     <script src="js/custom.js"></script>
     <script>
     $(document).ready(function() {
-
+        cart();
+        selectBox();
+        ratyDefault();
+        shopPopup();
     });
     </script>
 </body>
