@@ -862,7 +862,7 @@ h6 {
 }
 
 p {
-    color: #737c85;
+    color: #5e3459;
     line-height: 26px;
 }
 
@@ -3903,6 +3903,7 @@ ol {
 .logo .logo__svg {
     float: left;
     margin-top: 36px;
+    fill: #5e3459;
 }
 
 .logo .logo__svg .logo__svg-path {
@@ -3919,7 +3920,7 @@ ol {
     font-weight: bold;
     font-size: 24px;
     line-height: 16px;
-    color: #ffffff;
+    color: #5e3459;
     -webkit-font-smoothing: antialiased;
     -webkit-transition: 500ms;
     -o-transition: 500ms;
@@ -3927,11 +3928,11 @@ ol {
 }
 
 .logo:hover .logo__text {
-    color: #85d6de;
+    color: #5e3459;
 }
 
 .logo:hover .logo__svg .logo__svg-path {
-    fill: #85d6de;
+    fill: #5e3459;
 }
 
 .z-nav__toggle {
@@ -4474,13 +4475,13 @@ ol {
 }
 
 .logo--block .logo__svg .logo__svg-path {
-    fill: #34495e;
+    fill: #5e3459;
 }
 
 .logo--block .logo__text {
     padding: 10px 0 10px 39px;
     font-size: 25px;
-    color: #34495e;
+    color: #5e3459;
 }
 
 .user {
@@ -5160,29 +5161,29 @@ ol {
 }
 
 .header--light .logo .logo__text {
-    color: #85d6de;
+    color: #5e3459;
 }
 
 .header--light .logo .logo__svg .logo__svg-path {
-    fill: #85d6de;
+    fill: #5e3459;
 }
 
 .header--light .logo:hover .logo__svg .logo__svg-path {
-    fill: #34495e;
+    fill: #5e3459;
 }
 
 .header--light .logo:hover .logo__text,
 .header--light .logo:hover .highlight {
-    color: #34495e;
+    color: #5e3459;
 }
 
 .header--light .z-nav .z-nav__link {
-    color: #34495e;
+    color: #5e3459;
 }
 
 .header--light .z-nav__toggle-sub .fa-plus,
 .header--light .z-nav__toggle-sub .fa-minus {
-    color: #34495e;
+    color: #5e3459;
 }
 
 .header--light .cart .cart__link {
@@ -6278,7 +6279,7 @@ ol {
 }
 
 .footer--simple .logo__svg .logo__svg-path {
-    fill: #85d6de;
+    fill: #5e3459;
 }
 
 .footer--simple .navigation {
@@ -6430,35 +6431,35 @@ ol {
 }
 
 .footer--light .footer__list li:before {
-    color: #34495e;
+    color: #5e3459;
 }
 
 .footer--light .contact-info .fa,
 .footer--light .instagram-feed .media-follow:hover {
-    color: #34495e;
+    color: #5e3459;
 }
 
 .footer--light .logo .logo__svg .logo__svg-path {
-    fill: #85d6de;
+    fill: #5e3459;
 }
 
 .footer--light .logo:hover .logo__svg .logo__svg-path {
-    fill: #34495e;
+    fill: #5e3459;
 }
 
 .footer--light .logo__text {
-    color: #85d6de;
+    color: #5e3459;
 }
 
 .footer--light .logo:hover .logo__text {
-    color: #34495e;
+    color: #5e3459;
 }
 
 .footer--light .contact--dark .contact__field,
 .footer--light .form--name .form__input {
     background: #ffffff;
-    border: 1px solid #dfe6e7;
-    color: #34495e;
+    border: 1px solid #5e3459;
+    color: #5e3459;
 }
 
 .footer--light .form--name .form__submit {
@@ -7262,7 +7263,7 @@ ol {
     margin: 1px 0;
     font-size: 30px;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #34495e;
 }
 
 .date-slider-control .date-slide {
@@ -7391,7 +7392,7 @@ ol {
     min-height: 418px;
     height: 100%;
     padding-top: 10px;
-    background-color: #fed37f;
+    background-color: #34495e;
 }
 
 .slider-siderbar-control .prev-arrow,
@@ -7477,7 +7478,7 @@ ol {
     padding: 0 10px 0 40px;
     font-size: 14px;
     line-height: 26px;
-    color: #34495e;
+    color: #f9f8f2;
 }
 
 .counter-slider-present {
@@ -11813,13 +11814,13 @@ table th[class*="col-"] {
     margin-bottom: 36px;
     font-size: 48px;
     line-height: 44px;
-    color: #000;
+    color: #5e3459;
 }
 
 .heading-cascade .heading-cascade__step {
     display: block;
     font-size: 24px;
-    color: #85d6de;
+    color: #5e3459;
 }
 
 .heading-cascade--danger .heading-cascade__step {
@@ -14208,6 +14209,7 @@ table th[class*="col-"] {
 
 .staff-container {
     position: relative;
+    background: #d1d1e0;
 }
 
 .testimonial-block {
@@ -14568,13 +14570,14 @@ table th[class*="col-"] {
     left: 3px;
     z-index: -1;
     font: 140px 'Varela Round', sans-serif;
-    color: #dfe6e7;
+    color: #f9f8f2;
 }
 
 .service-step .service-step__heading {
     margin: 0;
     padding: 36px 0 15px;
     font-size: 28px;
+    color: #5e3459;
 }
 
 .service-step .service-step__descript {
@@ -26963,6 +26966,7 @@ html#ecwid_html body#ecwid_body .ecwid-minicart div.ecwid-minicart-clickArea {
 .carousel-sides .swiper-slide.carousel-slide-active .image-container {
     position: relative;
     border-color: #85d6de;
+    background-color: #34495e;
 }
 
 .carousel-sides .swiper-slide.carousel-slide-active .image-container:after {
