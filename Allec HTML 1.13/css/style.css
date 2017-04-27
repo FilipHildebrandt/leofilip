@@ -676,6 +676,13 @@ ol ol {
     padding-right: 5px;
 }
 
+.skills_list {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 5em 1em 0.5em 1em;
+}
+
 dl {
     margin-top: 0;
     margin-bottom: 20px;
@@ -15338,6 +15345,8 @@ table th[class*="col-"] {
 .product .product__photo img {
     max-width: 100%;
 }
+
+
 
 .product .product__title {
     display: block;
