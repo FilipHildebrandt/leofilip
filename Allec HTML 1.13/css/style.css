@@ -795,7 +795,7 @@ body {
 }
 
 a {
-    color: #85d6de;
+    color: #596d82;
     -webkit-transition: all 300ms ease-in;
     -o-transition: all 300ms ease-in;
     transition: all 300ms ease-in;
@@ -4067,7 +4067,7 @@ ol {
         background-color: #85d6de;
     }
     .z-nav .z-nav__link--simple:hover {
-        color: #85d6de;
+        color: #f9f8f2;
         background-color: transparent;
     }
     .z-nav .z-nav__link--active {
@@ -14414,7 +14414,7 @@ table th[class*="col-"] {
 .vacancy {
     padding: 30px 5px 40px 80px;
     margin-bottom: 30px;
-    background-color: #f3f7f7;
+    background-color: #f9f8f2;
 }
 
 .vacancy .vacancy__heading {
@@ -22188,12 +22188,12 @@ html#ecwid_html body#ecwid_body .ecwid-minicart div.ecwid-minicart-clickArea {
 }
 
 .btn-warning {
-    background-color: #fed37f;
+    background-color: #596d82;
 }
 
 .btn-warning:hover,
 .btn-warning:focus {
-    background-color: #e6bf73;
+    background-color: #34495e;
     box-shadow: none;
 }
 
